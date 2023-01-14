@@ -1,0 +1,32 @@
+id,name,domain,latitude,longitude,interval,timezone,sens,counter
+100057318,Broadway at 50th St,New York City DOT,40.761380,-73.984080,15,(UTC-05:00) US/Eastern;DST,5,Y2H18055362
+100010018,Pulaski Bridge,New York City DOT,40.742563,-73.951492,15,(UTC-05:00) US/Eastern;DST,5,Y2H22042948
+100009426,Manhattan Bridge Ped Path,New York City DOT,40.714573,-73.994950,15,(UTC-05:00) US/Eastern;DST,5,Y2H22042941
+100010019,Kent Ave btw North 8th St and North 9th St,New York City DOT,40.720959,-73.960930,15,(UTC-05:00) US/Eastern;DST,5,Y2H22042949
+100010022,Brooklyn Bridge Bike Path,New York City DOT,40.709274,-74.000990,15,(UTC-05:00) US/Eastern;DST,5,Y2H22042940
+300020241,Brooklyn Bridge Bicycle Path (Roadway),New York City DOT,40.712656,-74.004464,15,(UTC-05:00) US/Eastern;DST,5,Y2H22042943
+100055175,Manhattan Bridge Interference Calibration 2019 Bike Counter,New York City DOT,0.000000,0.000000,15,(UTC-05:00) US/Eastern;DST,5,Y2H13074105
+100058279,Kent Ave btw South 6th St. and Broadway,New York City DOT,40.711282,-73.968386,15,(UTC-05:00) US/Eastern;DST,5,
+300024007,111th St at 50th Ave,New York City DOT,40.745630,-73.852500,15,(UTC-05:00) US/Eastern;DST,5,Y2H21100728
+300020692,Test,New York City DOT,40.707381,-73.998845,0,(UTC-05:00) US/Eastern;DST,5,
+100009424,2nd Avenue - 26th St S,New York City DOT,40.739710,-73.979540,15,(UTC-05:00) US/Eastern;DST,5,
+300020904,Comprehensive Brooklyn Bridge Counter,New York City DOT,40.711644,-74.004109,15,(UTC-05:00) US/Eastern;DST,5,
+100039064,Forsyth Plaza,New York City DOT,40.715623,-73.994744,15,(UTC-05:00) US/Eastern;DST,5,
+100009429,Manhattan Bridge 2013 to 2018 Bike Counter,New York City DOT,40.699768,-73.985820,15,(UTC-05:00) US/Eastern;DST,5,
+100057316,8th Ave at 50th St.,New York City DOT,40.762348,-73.986120,15,(UTC-05:00) US/Eastern;DST,5,Y2H22042942
+100009427,Williamsburg Bridge Bike Path,New York City DOT,40.710530,-73.961450,15,(UTC-05:00) US/Eastern;DST,5,Y2H22042936
+100057320,Columbus Ave at 86th St.,New York City DOT,40.787700,-73.975050,15,(UTC-05:00) US/Eastern;DST,5,Y2H22042939
+100005020,Manhattan Bridge 2012 Test Bike Counter,New York City DOT,40.699810,-73.985890,15,(UTC-05:00) US/Eastern;DST,5,
+100057319,Amsterdam Ave at 86th St.,New York City DOT,40.787700,-73.975050,15,(UTC-05:00) US/Eastern;DST,5,Y2H22042937
+100051865,Manhattan Bridge 2012 to 2019 Bike Counter,New York City DOT,40.699810,-73.985890,15,(UTC-05:00) US/Eastern;DST,5,
+100010020,1st Avenue - 26th St N - Interference testing,New York City DOT,40.738830,-73.977165,15,(UTC-05:00) US/Eastern;DST,5,
+100009428,Ed Koch Queensboro Bridge Shared Path,New York City DOT,40.751010,-73.940450,15,(UTC-05:00) US/Eastern;DST,5,Y2H22042947
+100048744,Manhattan Bridge Interference Calibration 2018 Bike Counter,New York City DOT,0.000000,0.000000,15,(UTC-05:00) US/Eastern;DST,5,
+100009425,Prospect Park West,New York City DOT,40.671288,-73.971382,60,(UTC-05:00) US/Eastern;DST,5,Y2H21121588
+100062893,Manhattan Bridge Bike Comprehensive,New York City DOT,40.715600,-73.994750,60,(UTC-05:00) US/Eastern;DST,5,Y2H21121587
+100047029,Manhattan Bridge Display Bike Counter,New York City DOT,40.715600,-73.994750,60,(UTC-05:00) US/Eastern;DST,5,Y2H21121587
+300028963,Willis Ave,New York City DOT,40.807046,-73.924393,0,(UTC-05:00) US/Eastern;DST,5,YAH22104565
+100010017,Staten Island Ferry,New York City DOT,40.643387,-74.072075,15,(UTC-05:00) US/Eastern;DST,5,Y2H22104568
+300027723,Fountain Ave,New York City DOT,40.655606,-73.862951,15,(UTC-05:00) US/Eastern;DST,5,Y2H22104569
+300029648,Willis Ave Peds,New York City DOT,40.807046,-73.924393,15,(UTC-05:00) US/Eastern;DST,5,
+300029647,Willis Ave Bikes,New York City DOT,40.807046,-73.924393,15,(UTC-05:00) US/Eastern;DST,5,
