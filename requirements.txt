@@ -1,3 +1,8 @@
 torch
 timm
 yacs
+numpy
+pandas
+matplotlib
+scikit-learn
+seaborn
