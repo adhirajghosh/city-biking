@@ -1,5 +1,4 @@
-torch
-timm
+torch>=1.12.0
 yacs
 numpy
 pandas
@@ -7,3 +6,5 @@ matplotlib
 scikit-learn
 seaborn
 geopandas
+jupyterlab
+notebook
