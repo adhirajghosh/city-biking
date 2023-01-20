@@ -1,14 +1,19 @@
 import os
 import time
 import numpy as np
-import geopandas
+import geopandas as gdp
 
 @lru_cache() #only load the data once, output of this function is saved, if it is called multiple times
 def load_precinct_data():
+    '''
+    returns a geopandas geodataframe with the Precincts as index.
+    there are 77 precincts, but the ids go up to 123.
+    '''
     PRECINCTS_GJ = 'data/nyc/Police Precincts.geojson'
 
     with open(PRECINCTS_GJ) as f:
         precincts_gpd = gpd.read_file(f)
+    precincts_gpd = precincts_gpd.set_index("precinct")
     return precincts_gpd
 
 def get_precinct(lat, long):
@@ -19,8 +24,7 @@ def get_precinct(lat, long):
 
     bool_mask = precinct_data['geometry'].contains(point)
 
-    # from the precinct series, the values need to be grabbed, a list of length one, containing the int we want
-    precinct = precinct_data[bool_mask]['precinct'].values[0]
+    precinct = precinct_data[bool_mask]index[0]
 
     return precinct
 
