@@ -14,10 +14,12 @@ def load_precinct_data():
 def get_precinct(lat, long):
     precinct_data = load_precinct_data()
 
-    point = gpd.points_from_xy([long], [lat])[0] #this returns a list,
+    # this wants a list, and gives a list :shrug
+    point = gpd.points_from_xy([long], [lat])[0]
 
     bool_mask = precinct_data['geometry'].contains(point)
 
+    # from the precinct series, the values need to be grabbed, a list of length one, containing the int we want
     precinct = precinct_data[bool_mask]['precinct'].values[0]
 
     return precinct
