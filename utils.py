@@ -1,7 +1,8 @@
 import os
 import time
 import numpy as np
-import geopandas as gdp
+import geopandas as gpd
+from functools import lru_cache
 
 @lru_cache() #only load the data once, output of this function is saved, if it is called multiple times
 def load_precinct_data():
@@ -16,7 +17,7 @@ def load_precinct_data():
     precincts_gpd = precincts_gpd.set_index("precinct")
     return precincts_gpd
 
-def get_precinct(lat, long):
+def get_precinct_id(lat, long):
     precinct_data = load_precinct_data()
 
     # this wants a list, and gives a list :shrug
@@ -24,8 +25,6 @@ def get_precinct(lat, long):
 
     bool_mask = precinct_data['geometry'].contains(point)
 
-    precinct = precinct_data[bool_mask]index[0]
+    precinct = precinct_data[bool_mask].index[0]
 
     return precinct
-
-
