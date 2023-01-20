@@ -14,5 +14,3 @@ dependencies:
   - pip:
     - addict==2.4.0
     - yacs
-    - geopy
-
