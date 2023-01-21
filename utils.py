@@ -18,13 +18,22 @@ def load_precinct_data():
     return precincts_gpd
 
 def get_precinct_id(lat, long):
+    '''
+    this takes a list of latitudes and a list of longitudes
+    returns a list of precinctIDs
+
+    returns a string, if any coordinate pair is not in any precinct
+    '''
     precinct_data = load_precinct_data()
 
-    # this wants a list, and gives a list :shrug
-    point = gpd.points_from_xy([long], [lat])[0]
 
-    bool_mask = precinct_data['geometry'].contains(point)
+    points = gpd.points_from_xy(long, lat)
+    precincts = []
 
-    precinct = precinct_data[bool_mask].index[0]
+    for point in points:
+        bool_mask = precinct_data['geometry'].contains(point)
+        if not sum(bool_mask) == 1:
+            return 'The following Point is not in any police precinct: ' + str(point)
+        precincts.append(precinct_data[bool_mask].index[0])
 
-    return precinct
+    return precincts
