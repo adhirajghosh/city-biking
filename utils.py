@@ -46,9 +46,15 @@ def int_to_color(rgbint):
 
 
 def make_array(string, length):
+    '''
+    Convert Strings to arrays
+    '''
     return np.array(string.split(" ")).reshape((-1, length))
 
 def unify_into_df(borough_strings, columns):
+    '''
+    Creates a dataframe out of all the data
+    '''
     return pd.DataFrame([
         *make_array(borough_strings[0], len(columns)),
         *make_array(borough_strings[1], len(columns)),
