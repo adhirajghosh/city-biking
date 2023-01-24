@@ -2,9 +2,7 @@ import os
 import pandas as pd
 import utils
 
-
-
-def concatenate_KSI_data():
+def concatenate the KSI_data():
     df14 = []
     df15 = []
     df16 = []
@@ -21,13 +19,16 @@ def concatenate_KSI_data():
             elif file[3:5] == '16':
                 df16.append(df)
 
-    df14 = pd.concat(df14)[['injuries','precinct']]
-    df15 = pd.concat(df15)[['injuries','precinct']]
-    df16 = pd.concat(df16)[['injuries','precinct']]
+    df14 = pd.concat(df14)[['injuries', 'precinct']]
+    df15 = pd.concat(df15)[['injuries', 'precinct']]
+    df16 = pd.concat(df16)[['injuries', 'precinct']]
 
-    df14 =df14.groupby("precinct").sum()
-    df15 =df15.groupby("precinct").sum()
-    df16 =df16.groupby("precinct").sum()
+    df14 = df14.groupby("precinct").sum()
+    df15 = df15.groupby("precinct").sum()
+    df16 = df16.groupby("precinct").sum()
+
+
+def plot_KSI_data():
 
     gj = utils.load_precinct_data()
 
