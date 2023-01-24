@@ -8,3 +8,5 @@ seaborn
 geopandas
 jupyterlab
 notebook
+folium
+mapclassify
