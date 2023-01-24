@@ -33,7 +33,7 @@ def get_precinct_id(lat, long):
     for point in points:
         bool_mask = precinct_data['geometry'].contains(point)
         if not sum(bool_mask) == 1:
-            return 'The following Point is not in any police precinct: ' + str(point)
+            return precincts.append(-1)
         precincts.append(precinct_data[bool_mask].index[0])
 
     return precincts
