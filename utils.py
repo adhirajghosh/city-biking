@@ -41,6 +41,10 @@ def get_precinct_id(lat, long):
     return precincts
 
 
+def int_to_color(rgbint):
+    return (rgbint // 256 // 256 % 256, rgbint // 256 % 256, rgbint % 256, 0)
+
+
 def make_array(string, length):
     return np.array(string.split(" ")).reshape((-1, length))
 
