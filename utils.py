@@ -48,11 +48,11 @@ def int_to_color(rgbint):
 def make_array(string, length):
     return np.array(string.split(" ")).reshape((-1, length))
 
-def unify_into_df(burrow_strings, columns):
+def unify_into_df(borough_strings, columns):
     return pd.DataFrame([
-        *make_array(burrow_strings[0], len(columns)),
-        *make_array(burrow_strings[1], len(columns)),
-        *make_array(burrow_strings[2], len(columns)),
-        *make_array(burrow_strings[3], len(columns)),
-        *make_array(burrow_strings[4], len(columns))],
+        *make_array(borough_strings[0], len(columns)),
+        *make_array(borough_strings[1], len(columns)),
+        *make_array(borough_strings[2], len(columns)),
+        *make_array(borough_strings[3], len(columns)),
+        *make_array(borough_strings[4], len(columns))],
         columns=columns)
