@@ -11,7 +11,7 @@ def load_precinct_data():
     returns a geopandas geodataframe with the Precincts as index.
     there are 77 precincts, but the ids go up to 123.
     '''
-    PRECINCTS_GJ = 'data/nyc/Police Precincts.geojson'
+    PRECINCTS_GJ = 'data/Police Precincts.geojson'
 
     with open(PRECINCTS_GJ) as f:
         precincts_gpd = gpd.read_file(f)
