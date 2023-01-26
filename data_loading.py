@@ -57,8 +57,3 @@ def pickleCitibikeDataset():
 
 def getCitibikeDataset(file='citibike_data.pkl):
     return pickle.load(file)
-<<<<<<< HEAD
-    
-=======
-    
->>>>>>> 5958ba6eb2db2c567e3e8fad4055d7dffed86c37
