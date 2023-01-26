@@ -1,8 +1,6 @@
 name: death_by_cycle
 channels:
-  - pytorch
 dependencies:
-  - pytorch
   - numpy
   - pandas
   - matplotlib
@@ -11,6 +9,7 @@ dependencies:
   - geopandas
   - jupyterlab
   - notebook
+  - pip
   - pip:
     - addict==2.4.0
     - yacs
