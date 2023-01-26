@@ -1,6 +1,8 @@
 import os
 import pandas as pd
 import utils
+from os.path import exists
+
 
 
 def generate_ksi_df(path='data', save_csv=False):
@@ -41,6 +43,13 @@ def generate_ksi_df(path='data', save_csv=False):
         df_main.to_csv('data/ksi_nyc.csv', encoding='utf-8', index=False)
     return df_main
 
+def load_ksi(path='data/ksi_nyc.csv'):
+    file_exists = exists(path)
+    if file_exists:
+        return pd.read_csv(path)
+    else:
+        return generate_ksi_df(save_csv=True)
+
 def concatenate_KSI_data():
     df14 = []
     df15 = []
@@ -80,4 +89,6 @@ def concatenate_KSI_data():
 
     return df_main
 
-generate_ksi_df(save_csv=True)
+
+
+# generate_ksi_df(save_csv=True)

@@ -9,6 +9,7 @@ import pandas as pd
 import numpy as np
 import warnings
 from utils import *
+from ksi_data_generator import *
 
 all_precincts = ['1', '5', '6', '7', '9', '10', '13', '14', '17', '18', '19', '20', '22',
                  '23', '24', '25', '26', '28', '30', '32', '33', '34', '40', '41', '42',
@@ -106,3 +107,23 @@ def pickleCitibikeDataset():
 
 def getCitibikeDataset(file='citibike_data.pkl'):
     return pickle.load(file)
+
+def load_final_dataframe():
+    ksi = load_ksi()
+    ksi = ksi.reset_index(drop=True)
+    ksi = ksi.groupby(['precinct', 'year']).sum()
+    ksi = ksi.sort_index()
+
+    bike_count = processCitibikeDataset()
+
+    bike_count.columns = list(map(int, bike_count.columns))
+
+    bike_count.index = bike_count.index.year
+    bike_count = pd.DataFrame(bike_count.rolling(12).sum().iloc[range(11, 72, 12)].unstack(), columns=['bike_count'])
+    bike_count.index.names = ['precinct', 'year']
+
+    df = ksi.join(bike_count, how='inner')
+
+    df = df.reset_index()
+
+    return df
