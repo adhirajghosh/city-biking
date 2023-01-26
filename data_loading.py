@@ -102,8 +102,7 @@ def pickleCitibikeDataset():
 
                 all_dfs[year + '-' + month] = df.copy()
 
-      pickle.dump(all_dfs, open('citibike_data.pkl', 'wb'))  
-    
+    pickle.dump(all_dfs, open('citibike_data.pkl', 'wb'))
 
-def getCitibikeDataset(file='citibike_data.pkl):
+def getCitibikeDataset(file='citibike_data.pkl'):
     return pickle.load(file)
