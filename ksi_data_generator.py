@@ -10,6 +10,7 @@ def generate_ksi_df(path='data', save_csv=False):
     for file in os.listdir(path):
         if file[:3] == 'KSI':
             df = pd.read_csv(path + '/' + file)
+            df['type_of_injury'] = file[6:8]
             if file[3:5] == '14':
                 df['year'] = 2014
                 df14.append(df)
@@ -79,4 +80,4 @@ def concatenate_KSI_data():
 
     return df_main
 
-
+generate_ksi_df(save_csv=True)
