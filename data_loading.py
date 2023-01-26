@@ -57,7 +57,7 @@ def processCitibikeDataset(file='data/all_dfs.pkl'):
     df.index = pd.DatetimeIndex(df.index)
 
     for column in df.columns:
-        df.loc[:, column] = df.loc[:, column].interpolate(method='polynomial', order=5)
+        df.loc[:, column] = df.loc[:, column].interpolate(method='linear')
 
     return df
 
