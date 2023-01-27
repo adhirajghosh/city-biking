@@ -127,3 +127,4 @@ def load_final_dataframe():
     df = df.reset_index()
 
     return df
+

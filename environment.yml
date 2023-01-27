@@ -1,5 +1,7 @@
 name: death_by_cycle
 channels:
+  - conda-forge
+  - defaults
 dependencies:
   - numpy
   - pandas
@@ -7,6 +9,8 @@ dependencies:
   - scikit-learn
   - seaborn
   - geopandas
+  - patsy
+  - statsmodels
   - jupyterlab
   - notebook
   - pip
